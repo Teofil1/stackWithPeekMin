@@ -22,7 +22,11 @@ public class StackWithPeekMin {
             return null;
         } else {
             System.out.println("Poping...");
-            return stack.pop().getValue();
+            Integer popedValue = stack.pop().getValue();
+            if (!isEmpty()){
+                minElem = stack.peek().getValue();
+            }
+            return popedValue;
         }
 
     }
